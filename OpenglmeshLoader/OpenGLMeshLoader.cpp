@@ -351,7 +351,7 @@ void myReshape(int w, int h)
 void LoadAssets()
 {
 	// Loading Model files
-	model_Crystal.Load("Models/Crystal/0a0c75dab0844e7fa5b299d4af858bec.3ds");
+	model_Crystal.Load("Models/Crystal/model.3ds");
 	model_WarmHole.Load("Models/WarmHole/33b7ab81fc1d4d6e8310bad1567b96da.3ds");
 	model_astronaut.Load("Models/Astronaut/Spaceman N100519.3ds");
 	model_Asteriod.Load("Models/Asteriod/ASTHANGR.3ds");
