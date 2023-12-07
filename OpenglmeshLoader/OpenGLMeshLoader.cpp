@@ -181,6 +181,26 @@ void myDisplay(void)
 	glPushMatrix();
 	glRotatef(90.f, 1, 0, 0);
 	glTranslatef(0, 0.0, 0); // Adjust the position as needed
+	glScalef(0.9, 0.9, 0.9); // Adjust the scaling factor as needed
+
+	model_Crystal.Draw();
+	glPopMatrix();
+
+
+	glPushMatrix();
+	glRotatef(90.f, 1, 0, 0);
+	glTranslatef(-10, 10.0, 0); // Adjust the position as needed
+	glScalef(0.9, 0.9, 0.9); // Adjust the scaling factor as needed
+
+	model_Crystal.Draw();
+	glPopMatrix();
+
+
+	glPushMatrix();
+	glRotatef(90.f, 1, 0, 0);
+	glTranslatef(10, 10.0, 0); // Adjust the position as needed
+	glScalef(0.9, 0.9, 0.9); // Adjust the scaling factor as needed
+
 	model_Crystal.Draw();
 	glPopMatrix();
 
@@ -198,14 +218,14 @@ void myDisplay(void)
 
 	model_Asteriod.Draw();
 	glPopMatrix();
-	/*
+
 	glPushMatrix();
 	glTranslatef(10.0, 3.0, 0.0); // Adjust the position as needed
-	glScalef(0.01, 0.01, 0.01); // Adjust the scaling factor as needed
+	glScalef(0.0099, 0.0099, 0.0099); // Adjust the scaling factor as needed
 
 	model_Asteriod.Draw();
 	glPopMatrix();
-	*/
+
 	glPushMatrix();
 	glTranslatef(0.0, 3.0, 10.0); // Adjust the position as needed
 	glScalef(0.01, 0.01, 0.01); // Adjust the scaling factor as needed
@@ -226,7 +246,7 @@ void myDisplay(void)
 
 	glPushMatrix();
 	glRotatef(90.f, 1, 0, 0);
-	glTranslatef(0.0, -20.0, 0); // Adjust the position as needed
+	glTranslatef(0.0, -20.0, -6); // Adjust the position as needed
 	model_WarmHole.Draw();
 	glPopMatrix();
 
@@ -246,7 +266,7 @@ void myDisplay(void)
 
 	glPopMatrix();
 
-	
+
 
 
 	glutSwapBuffers();
@@ -351,8 +371,8 @@ void myReshape(int w, int h)
 void LoadAssets()
 {
 	// Loading Model files
-	model_Crystal.Load("Models/Crystal/model.3ds");
-	model_WarmHole.Load("Models/WarmHole/33b7ab81fc1d4d6e8310bad1567b96da.3ds");
+	model_Crystal.Load("Models/Crystal/Crystal.3ds");
+	model_WarmHole.Load("Models/WarmHole/model.3ds");
 	model_astronaut.Load("Models/Astronaut/Spaceman N100519.3ds");
 	model_Asteriod.Load("Models/Asteriod/ASTHANGR.3ds");
 
